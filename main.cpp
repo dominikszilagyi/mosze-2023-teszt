@@ -23,7 +23,7 @@ int main() {
   // Kiíratás
   std::cout << "Az elemek átlaga: " << atlag << std::endl;
 
-  std::cout << "Hello from the other siiiiiiiiideeee! " << std::endl;
+  std::cout << "Hello from the other siiiiiidee! " << std::endl;
 
   return 0;
 }
