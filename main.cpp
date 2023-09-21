@@ -1,26 +1,27 @@
 #include <iostream>
 
-constexpr int N_ELEMENTS = 100;
+const int N_ELEMENTS = 100;
 
-int main()
-{
-    int *b = new int[NELEMENTS]; // Hibás tömblétrehozás
-    std::cout << '1-100 ertekek duplazasa' // Nem szép kiírás
-    for (int i = 0;) // Hiányos for ciklus
-    {
-        b[i] = i * 2;
-    }
-    for (int i = 0; i; i++)
-    {
-        std::cout << "Ertek:" // Hiányos kiíratás
-    }    
-    std::cout << "Atlag szamitasa: " << std::endl;
-    int atlag;
-    for (int i = 0; i < N_ELEMENTS, i++) // Hibás for ciklus szintaktika
-    {
-        atlag += b[i]
-    }
-    atlag /= N_ELEMENTS;
-    std::cout << "Atlag: " << atlag << std::endl;
-    return 0;
+int main() {
+  // Tömb létrehozása
+  int tomb[N_ELEMENTS];
+
+  // Tömb feltöltése
+  for (int i = 1; i <= N_ELEMENTS; i++) {
+    tomb[i-1] = i * 2;
+    std::cout << i << ". érték:\t" << tomb[i-1] << std::endl;
+  }
+
+  // Tömb átlagának kiszámítása
+  double osszeg = 0;
+  for (int i = 0; i < N_ELEMENTS; i++) {
+    osszeg += tomb[i];
+  }
+  
+  double atlag = osszeg / N_ELEMENTS;
+
+  // Kiíratás
+  std::cout << "Az elemek átlaga: " << atlag << std::endl;
+
+  return 0;
 }
